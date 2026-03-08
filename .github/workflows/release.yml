@@ -12,8 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      id-token: write
+      contents: read
 
     steps:
       - name: Checkout repo
@@ -52,8 +51,6 @@ jobs:
             packages/fuck-nothing/dist
             packages/fuck-nothing/package.json
 
-      - run: npm view fxxx-nothing
-
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
@@ -74,7 +71,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 24   # 一定要大于24版本的才支持 OIDC
           registry-url: https://registry.npmjs.org
 
       - name: Download core
@@ -83,14 +80,8 @@ jobs:
           name: core
           path: packages/fuck-nothing
 
-      - name: Check downloaded files
-        run: |
-          echo "===== LIST FILES ====="
-          ls -R packages/fuck-nothing
-
       - name: Publish core
         run: |
-          cat packages/fuck-nothing/package.json
           cd packages/fuck-nothing
           npm publish
 
@@ -98,7 +89,7 @@ jobs:
         id: version
         run: |
           VERSION=$(node -p 'require("./packages/fuck-nothing/package.json").version')
-          echo "RELEASE_TAG=core@$VERSION" >> $GITHUB_OUTPUT
+          echo "RELEASE_TAG=v$VERSION" >> $GITHUB_OUTPUT
 
       - name: Create git tag
         uses: actions/github-script@v7

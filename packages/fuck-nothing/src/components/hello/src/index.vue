@@ -1,5 +1,5 @@
 <script setup lang="ts">
-console.log('hello funck nothing');
+console.log('hello funck nothing !!!');
 </script>
 
 <template>

@@ -1,6 +1,6 @@
 {
   "name": "fxxx-nothing",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Just writing casually",
   "main": "dist/fxxx-nothing.umd.js",
   "module": "dist/fxxx-nothing.es.js",
