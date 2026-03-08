@@ -1,0 +1,11 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@fuck-nothing-dev": ["../packages/fuck-nothing/src/index.ts"]
+        }
+    },
+    "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "../packages/fuck-nothing/**/*"],
+    "exclude": ["src/**/__tests__/*"]
+}

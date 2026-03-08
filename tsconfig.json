@@ -1,0 +1,27 @@
+{
+    "files": [],
+    "references": [
+        { "path": "./packages/fuck-nothing" },
+        { "path": "./playground" },
+        { "path": "./documents" }
+    ],
+    "compilerOptions": {
+        "composite": true,
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "outDir": "dist",
+        "module": "ESNext",
+        "target": "ESNext",
+        "moduleResolution": "Bundler",
+        "esModuleInterop": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "baseUrl": ".",
+        "rootDir": ".",
+        "types": ["vite/client"],
+        "paths": {
+            "@fuck-nothing": ["packages/fuck-nothing"]
+        }
+    }
+}

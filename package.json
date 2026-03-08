@@ -1,0 +1,54 @@
+{
+  "name": "fuck.nothing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "vue-tsc --build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write packages/**/*.{ts,tsx,vue} playground/src/*.{ts,tsx,vue} documents/src/*.{ts,tsx,vue,md}",
+    "play": "pnpm --filter playground dev",
+    "docs:dev": "pnpm --filter documents dev",
+    "docs:build": "pnpm --filter documents build",
+    "docs:preview": "pnpm --filter documents preview",
+    "core:build": "pnpm --filter ./packages/fuck-nothing build",
+    "prepare": "husky",
+    "precommit": "pnpm run type-check && pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,md}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "ui",
+    "components"
+  ],
+  "author": "angxuejian",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "25.0.3",
+    "@vitejs/plugin-vue": "5.2.4",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.7.0",
+    "eslint": "^10.0.3",
+    "eslint-plugin-unused-imports": "^4.4.1",
+    "eslint-plugin-vue": "^10.8.0",
+    "husky": "^9.1.7",
+    "jiti": "^2.6.1",
+    "lint-staged": "^16.3.2",
+    "prettier": "^3.8.1",
+    "sass-embedded": "1.83.1",
+    "typescript": "^5.9.3",
+    "vite": "6.3.5",
+    "vue-tsc": "^3.2.5"
+  },
+  "dependencies": {
+    "vue": "3.5.22"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "fuck-nothing",
+  "version": "1.0.0",
+  "description": "Just writing casually",
+  "main": "dist/fuck-nothing.umd.js",
+  "module": "dist/fuck-nothing.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite-plugin-dts": "4.5.4"
+  }
+}

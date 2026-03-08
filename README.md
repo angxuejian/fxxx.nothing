@@ -1,2 +1,3 @@
 # fuck.nothing
-A Vue3 UI library
+
+Just writing casually
