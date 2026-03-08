@@ -60,7 +60,7 @@ importers:
 
   documents:
     dependencies:
-      fuck-nothing:
+      fxxx-nothing:
         specifier: workspace:*
         version: link:../packages/fuck-nothing
       pinia:
@@ -99,7 +99,7 @@ importers:
 
   playground:
     dependencies:
-      fuck-nothing:
+      fxxx-nothing:
         specifier: workspace:*
         version: link:../packages/fuck-nothing
 
