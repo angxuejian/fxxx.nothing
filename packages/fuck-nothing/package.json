@@ -20,7 +20,11 @@
   ],
   "author": "angxuejian",
   "license": "MIT",
-  "repository": "https://github.com/angxuejian/fuck.nothing",
+  "repository": "https://github.com/angxuejian/fxxx.nothing",
+  "homepage": "https://angxuejian.github.io/fxxx.nothing/",
+  "bugs": {
+    "url": "https://github.com/angxuejian/fxxx-nothing/issues"
+  },
   "devDependencies": {
     "vite-plugin-dts": "4.5.4"
   }
