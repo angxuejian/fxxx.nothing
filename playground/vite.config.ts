@@ -7,9 +7,8 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      '@fuck-nothing-dev': fileURLToPath(
-        new URL('../packages/fuck-nothing/src/index.ts', import.meta.url),
-      ),
+      '@fuck-nothing-dev': fileURLToPath(new URL('../packages/fuck-nothing/src', import.meta.url)),
+      '@theme': fileURLToPath(new URL('../packages/theme/src', import.meta.url)),
     },
   },
 });

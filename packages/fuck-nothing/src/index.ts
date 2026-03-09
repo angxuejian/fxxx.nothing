@@ -1,12 +1,14 @@
 import * as Components from './components/main';
-import { type App, Plugin } from 'vue';
+import type { App, Plugin } from 'vue';
 
-const FuckNothing: Plugin = {
-  install(app: App) {
-    Object.entries(Components).forEach(([key, component]) => {
-      app.component(key, component as any);
-    });
-  },
+export * from './components/main';
+
+const install = (app: App) => {
+  Object.entries(Components).forEach(([name, comp]) => {
+    app.component(name, comp as any);
+  });
 };
 
-export default FuckNothing;
+const plugin: Plugin = { install };
+
+export default plugin;

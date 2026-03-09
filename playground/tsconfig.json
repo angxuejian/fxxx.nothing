@@ -3,7 +3,9 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@fuck-nothing-dev": ["../packages/fuck-nothing/src/index.ts"]
+            "@fuck-nothing-dev": ["../packages/fuck-nothing/src"],
+            "@theme/*": ["../packages/theme/src/*"]
+
         }
     },
     "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "../packages/fuck-nothing/**/*"],

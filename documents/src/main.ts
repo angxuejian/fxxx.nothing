@@ -4,7 +4,7 @@ import { createPinia } from 'pinia';
 
 import App from './App.vue';
 import router from './router';
-// import fuckNothing from '@fuck-nothing'; // prod
-import fuckNothing from '@fuck-nothing-dev'; // dev
+import fxxxNothing from '@fuck-nothing-dev'; // dev
+import '@theme/main.scss';
 
-createApp(App).use(createPinia()).use(router).use(fuckNothing).mount('#app');
+createApp(App).use(createPinia()).use(router).use(fxxxNothing).mount('#app');

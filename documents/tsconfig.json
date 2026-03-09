@@ -1,13 +1,14 @@
 {
-    "extends": "../tsconfig.json",
-    "compilerOptions": {
-        "baseUrl": ".",
-        "paths": {
-            "@/*": ["src/*"],
-            "@VueMarkdown": ["./plugins/vite-plugin-vue-markdown"],
-            "@fuck-nothing-dev": ["../packages/fuck-nothing/src/index.ts"]
-        }
-    },
-    "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "../packages/fuck-nothing/**/*"],
-    "exclude": ["src/**/__tests__/*"]
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@VueMarkdown": ["./plugins/vite-plugin-vue-markdown"],
+      "@fuck-nothing-dev": ["../packages/fuck-nothing/src/index.ts"],
+      "@theme/*": ["../packages/theme/src/*"]
+    }
+  },
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "../packages/fuck-nothing/**/*"],
+  "exclude": ["src/**/__tests__/*"]
 }

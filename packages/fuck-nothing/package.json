@@ -2,11 +2,22 @@
   "name": "fxxx-nothing",
   "version": "1.0.2",
   "description": "Just writing casually",
-  "main": "dist/fxxx-nothing.umd.js",
+  "main": "dist/fxxx-nothing.cjs.js",
   "module": "dist/fxxx-nothing.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/fxxx-nothing.es.js",
+      "require": "./dist/fxxx-nothing.cjs.js"
+    },
+    "./style.css": "./dist/theme/index.css"
+  },
+  "sideEffects": [
+    "*.css"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

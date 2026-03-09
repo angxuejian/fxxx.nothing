@@ -14,6 +14,9 @@
     "docs:build": "pnpm --filter documents build",
     "docs:preview": "pnpm --filter documents preview",
     "core:build": "pnpm --filter ./packages/fuck-nothing build",
+    "theme:build": "pnpm --filter ./packages/theme build",
+    "copy-theme": "shx mkdir -p packages/fuck-nothing/dist/theme && shx cp -r packages/theme/dist/* packages/fuck-nothing/dist/theme",
+    "build": "pnpm theme:build && pnpm core:build && pnpm copy-theme",
     "prepare": "husky",
     "precommit": "pnpm run type-check && pnpm lint-staged"
   },
@@ -39,11 +42,13 @@
     "eslint": "^10.0.3",
     "eslint-plugin-unused-imports": "^4.4.1",
     "eslint-plugin-vue": "^10.8.0",
+    "fast-glob": "^3.3.3",
     "husky": "^9.1.7",
     "jiti": "^2.6.1",
     "lint-staged": "^16.3.2",
     "prettier": "^3.8.1",
     "sass-embedded": "1.83.1",
+    "shx": "^0.4.0",
     "typescript": "^5.9.3",
     "vite": "6.3.5",
     "vue-tsc": "^3.2.5"

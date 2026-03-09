@@ -29,6 +29,7 @@ export default defineConfig(async () => {
         '@fuck-nothing-dev': fileURLToPath(
           new URL('../packages/fuck-nothing/src/index.ts', import.meta.url),
         ),
+        '@theme': fileURLToPath(new URL('../packages/theme/src', import.meta.url)),
       },
     },
 

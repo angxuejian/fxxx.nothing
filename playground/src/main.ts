@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import fuckNothing from 'fuck-nothing'; // prod
-// import fuckNothing from '@fuck-nothing-dev' // dev
+import fxxxNothing from '@fuck-nothing-dev'; // dev
+import '@theme/main.scss';
 
-createApp(App).use(fuckNothing).mount('#app');
+createApp(App).use(fxxxNothing).mount('#app');
